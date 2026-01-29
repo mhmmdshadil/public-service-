@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSL | Silent Signals Layer</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="glass"
+            style="position: fixed; top: 1rem; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1100px; z-index: 1000; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-weight: 600; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--accent-teal);">●</span> SSL
+            </div>
+            <div style="display: flex; gap: 2rem; font-size: 0.9rem; color: var(--text-secondary);">
+                <span>Technology</span>
+                <span>Case Studies</span>
+                <span>Ethics</span>
+            </div>
+            <button class="glass" style="padding: 0.5rem 1rem; cursor: pointer; color: var(--text-primary);">NICS
+                Dashboard</button>
+        </nav>
+
+        <!-- Hero Section -->
+        <main class="container" style="padding-top: 10rem; min-height: 100vh;">
+            <section class="animate-in">
+                <p
+                    style="color: var(--accent-teal); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.2em; margin-bottom: 1rem;">
+                    Pre-Incident Intelligence</p>
+                <h1 style="font-size: 4rem; max-width: 800px; line-height: 1.1; margin-bottom: 2rem;">
+                    Listening before <br>
+                    <span style="color: var(--text-secondary);">people speak.</span>
+                </h1>
+                <p style="color: var(--text-secondary); max-width: 500px; font-size: 1.1rem; margin-bottom: 3rem;">
+                    Detecting micro-signals of distress through behavior, rhythm, and physiology. Early-warning empathy
+                    for modern emergency systems.
+                </p>
+                <div style="display: flex; gap: 1rem;">
+                    <button
+                        style="background: var(--text-primary); color: var(--bg-primary); border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; cursor: pointer;">View
+                        Live Demo</button>
+                    <button class="glass"
+                        style="padding: 1rem 2rem; color: var(--text-primary); cursor: pointer;">Ethics
+                        Whitepaper</button>
+                </div>
+            </section>
+
+            <!-- NICS Map Overlay Section -->
+            <section style="margin-top: 10rem; position: relative;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">NICS Integration</h2>
+                    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                        Silent Signals Layer acts as an invisible intelligence grid, pulsing where human distress is
+                        detected but not yet reported.
+                    </p>
+                </div>
+
+                <div class="glass" style="height: 500px; position: relative; overflow: hidden; background: #0a0e14;">
+                    <!-- Map Canvas -->
+                    <canvas id="nics-map" style="width: 100%; height: 100%;"></canvas>
+
+                    <!-- Map HUD -->
+                    <div
+                        style="position: absolute; top: 1.5rem; left: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="glass"
+                            style="padding: 0.8rem 1.2rem; font-size: 0.8rem; display: flex; align-items: center; gap: 0.6rem;">
+                            <span class="pulse-red"
+                                style="width: 8px; height: 8px; background: var(--accent-red); border-radius: 50%;"></span>
+                            ACTIVE ANOMALY: ZONE 4
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Live Signal Demo -->
+            <section style="margin-top: 10rem; padding-bottom: 10rem;">
+                <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start;">
+                    <div>
+                        <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">The Behavioral Feed</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                            Our pattern analysis works at the edge. No faces are stored, no identities recorded. We only
+                            track the geometry of distress.
+                        </p>
+
+                        <div style="display: grid; gap: 2rem;">
+                            <div class="glass" style="padding: 1.5rem;">
+                                <h4 style="color: var(--accent-teal); margin-bottom: 0.5rem;">Micro-Expressions</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);">Sub-second involuntary cues:
+                                    lip compression, brow furrowing, gaze drops.</p>
+                            </div>
+                            <div class="glass" style="padding: 1.5rem;">
+                                <h4 style="color: var(--accent-amber); margin-bottom: 0.5rem;">Freeze Patterns</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);">Sudden cessation of natural
+                                    movement amidst high-rhythm environments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass"
+                        style="position: relative; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: #000;">
+                        <div id="demo-overlay" style="position: absolute; inset: 0; pointer-events: none;">
+                            <!-- AI Bounding Boxes will be simulated here -->
+                        </div>
+                        <div style="text-align: center; color: var(--text-muted);">
+                            <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;">Simulated
+                                Edge Feed</p>
+                            <p style="font-size: 0.7rem; margin-top: 0.5rem;">[ Privacy Shield Active ]</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Use Cases -->
+                <section style="margin-top: 5rem;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                        <div class="glass" style="padding: 2rem;">
+                            <p style="color: var(--accent-teal); font-size: 0.7rem; margin-bottom: 1rem;">SCENARIO 01
+                            </p>
+                            <h3 style="margin-bottom: 1rem;">Elderly & Vulnerable</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Falling without a call. SSL
+                                detects the sudden freeze and physiological micro-tremors, alerting neighbor-responders
+                                instantly.</p>
+                        </div>
+                        <div class="glass" style="padding: 2rem;">
+                            <p style="color: var(--accent-amber); font-size: 0.7rem; margin-bottom: 1rem;">SCENARIO 02
+                            </p>
+                            <h3 style="margin-bottom: 1rem;">Public Events</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Panic detected before a
+                                stampede. Crowd rhythm anomalies trigger early evacuation protocols before escalation.
+                            </p>
+                        </div>
+                        <div class="glass" style="padding: 2rem;">
+                            <p style="color: var(--accent-red); font-size: 0.7rem; margin-bottom: 1rem;">SCENARIO 03</p>
+                            <h3 style="margin-bottom: 1rem;">Disaster Zones</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Finding life under rubble.
+                                Micro-movements and rhythmic sound patterns guide SAR teams to silent survivors.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Ethics & Privacy -->
+                <section
+                    style="margin-top: 10rem; padding: 6rem; background: var(--bg-secondary); border-radius: 24px; text-align: center;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Ethics by Design</h2>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem;">
+                        <div>
+                            <h4 style="margin-bottom: 1rem; color: var(--accent-teal);">No Identity</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">We process geometry, not pixels.
+                                No faces are stored, no names are known.</p>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 1rem; color: var(--accent-teal);">Local Processing</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">Decisions happen at the edge.
+                                Intelligence is transmitted; data remains local.</p>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 1rem; color: var(--accent-teal);">Human in the Loop</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">SSL suggests; it never commands.
+                                Final response authority always rests with human dispatch.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <footer
+                    style="margin-top: 10rem; padding-bottom: 5rem; text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+                    <p>&copy; 2026 SSL | Built for Public Safety & Human Empathy</p>
+                </footer>
+        </main>
+    </div>
+    <script type="module" src="./main.js"></script>
+    <style>
+        .pulse-red {
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0% {
+                box-shadow: 0 0 0 0 rgba(245, 101, 101, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(245, 101, 101, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(245, 101, 101, 0);
+            }
+        }
+    </style>
+</body>
+
+</html>

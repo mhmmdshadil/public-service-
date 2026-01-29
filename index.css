@@ -1,0 +1,67 @@
+:root {
+  /* Design Tokens - Muted, Professional, Empathetic */
+  --bg-primary: #0f141a;
+  --bg-secondary: #1a1f26;
+  --bg-tertiary: #252b33;
+  
+  --text-primary: #f0f2f5;
+  --text-secondary: #9ea4b0;
+  --text-muted: #6b7280;
+  
+  --accent-teal: #4fd1c5;
+  --accent-amber: #f6ad55;
+  --accent-red: #f56565;
+  
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(12px);
+  
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --transition-fluid: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Utilities */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+}
+
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

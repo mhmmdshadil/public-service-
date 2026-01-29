@@ -4,211 +4,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSL | Listening Before Words</title>
+    <title>Care-Aid | Operational Observation Layer</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div id="app">
-        <!-- Persistent Navigation -->
-        <nav class="glass"
-            style="position: fixed; top: 1.5rem; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; z-index: 1000; padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center;">
-            <div style="font-weight: 600; font-size: 1.1rem; display: flex; align-items: center; gap: 0.6rem; cursor: pointer;"
-                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <span style="color: var(--accent-teal);">●</span> SSL LAYER
+    <div class="layout-grid">
+        <!-- Operational Sidebar -->
+        <aside class="sidebar">
+            <div style="margin-bottom: 3rem;">
+                <h3 class="label">System</h3>
+                <h1 style="font-size: 1.5rem; margin-top: 0.5rem;">Care-Aid</h1>
+                <p style="font-size: 0.85rem; color: var(--text-tertiary); margin-top: 0.25rem;">Pre-Incident
+                    Observation</p>
             </div>
-            <div style="display: flex; gap: 2.5rem; font-size: 0.85rem; color: var(--text-secondary);">
-                <a href="#demo" style="color: inherit; text-decoration: none; transition: 0.3s;"
-                    onmouseover="this.style.color='var(--text-primary)'"
-                    onmouseout="this.style.color='var(--text-secondary)'">Live Demo</a>
-                <a href="#case-studies" style="color: inherit; text-decoration: none; transition: 0.3s;"
-                    onmouseover="this.style.color='var(--text-primary)'"
-                    onmouseout="this.style.color='var(--text-secondary)'">Scenarios</a>
-                <a href="#ethics" style="color: inherit; text-decoration: none; transition: 0.3s;"
-                    onmouseover="this.style.color='var(--text-primary)'"
-                    onmouseout="this.style.color='var(--text-secondary)'">Ethics</a>
-            </div>
-            <button class="btn btn-primary" id="btn-nics-dashboard">NICS Dashboard</button>
-        </nav>
 
-        <!-- Hero: The Human Micro-Signal -->
-        <header class="container" style="padding-top: 12rem; min-height: 90vh;">
-            <div class="reveal" id="hero-content">
-                <p
-                    style="color: var(--accent-teal); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.3em; margin-bottom: 1.5rem; font-weight: 600;">
-                    Early-Warning Empathy</p>
-                <h1
-                    style="font-size: clamp(3rem, 8vw, 5rem); max-width: 900px; line-height: 1.05; margin-bottom: 2.5rem;">
-                    We detect distress <br>
-                    <span style="color: var(--text-muted);">before they speak.</span>
-                </h1>
-                <p
-                    style="color: var(--text-secondary); max-width: 580px; font-size: 1.15rem; margin-bottom: 3.5rem; font-weight: 300; line-height: 1.7;">
-                    Most emergencies begin with silent micro-signals: a sudden freeze, hyperventilation, or repetitive
-                    behavior. SSL notices when humans cannot ask for help.
-                </p>
-                <div style="display: flex; gap: 1.25rem;">
-                    <button class="btn btn-primary" id="btn-explore-engine">Explore the Engine</button>
-                    <button class="btn btn-outline" id="btn-read-ethics">Privacy Standards</button>
+            <nav style="flex-grow: 1;">
+                <div style="margin-bottom: 2rem;">
+                    <h4 class="label" style="margin-bottom: 1rem;">Monitoring</h4>
+                    <ul
+                        style="list-style: none; font-size: 0.9rem; color: var(--text-secondary); display: grid; gap: 0.75rem;">
+                        <li style="color: var(--text-primary); font-weight: 500;">Live Feed</li>
+                        <li>Sector Analysis</li>
+                        <li>Historical Patterns</li>
+                    </ul>
                 </div>
-            </div>
-        </header>
+                <div>
+                    <h4 class="label" style="margin-bottom: 1rem;">Protocol</h4>
+                    <ul
+                        style="list-style: none; font-size: 0.9rem; color: var(--text-secondary); display: grid; gap: 0.75rem;">
+                        <li>Incident Thresholds</li>
+                        <li>Privacy Audit</li>
+                        <li>Review Logs</li>
+                    </ul>
+                </div>
+            </nav>
 
-        <!-- Core Insight Section -->
-        <section class="container" style="margin-top: 8rem;" id="demo">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
-                <div class="reveal">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">The Observational Grid</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem;">
-                        Silent Signals Layer (SSL) integrates into public infrastructure to detect patterns of
-                        non-verbal distress. By processing geometry instead of identity, we protect privacy while saving
-                        lives.
+            <div style="padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
+                <p class="label">System Status</p>
+                <div
+                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.85rem;">
+                    <span
+                        style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; opacity: 0.8;"></span>
+                    Operational
+                </div>
+                <p class="mono" style="font-size: 0.75rem; color: var(--text-tertiary); margin-top: 0.25rem;">
+                    v2.4.0-stable</p>
+            </div>
+        </aside>
+
+        <!-- Main Interface -->
+        <main class="main-content">
+            <!-- Header -->
+            <header style="margin-bottom: 4rem; display: flex; justify-content: space-between; align-items: flex-end;">
+                <div>
+                    <h2 style="margin-bottom: 0.5rem;">Observation Layer</h2>
+                    <p style="color: var(--text-secondary); max-width: 600px;">
+                        Detecting non-verbal distress signals through pattern persistence. <br>
+                        System accumulates confidence only when multiple signals overlap over time.
                     </p>
+                </div>
+                <div style="text-align: right;">
+                    <p class="label">Current Confidence</p>
+                    <div class="mono" id="main-confidence-display" style="font-size: 2rem; color: var(--text-primary);">
+                        0.00%</div>
+                </div>
+            </header>
 
-                    <div style="display: grid; gap: 1.5rem;">
-                        <div class="glass" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: start;">
-                            <div
-                                style="width: 40px; height: 40px; background: rgba(45, 212, 191, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent-teal); flex-shrink: 0;">
-                                01</div>
-                            <div>
-                                <h4 style="margin-bottom: 0.5rem;">Pattern Correlation</h4>
-                                <p style="font-size: 0.9rem; color: var(--text-secondary);">Matching micro-expressions
-                                    with physiological indicators for high-confidence alerts.</p>
-                            </div>
-                        </div>
-                        <div class="glass" style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: start;">
-                            <div
-                                style="width: 40px; height: 40px; background: rgba(251, 191, 36, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent-amber); flex-shrink: 0;">
-                                02</div>
-                            <div>
-                                <h4 style="margin-bottom: 0.5rem;">Pre-Incident Detection</h4>
-                                <p style="font-size: 0.9rem; color: var(--text-secondary);">Spotting panic, freeze, or
-                                    medical events minutes before a call is made.</p>
-                            </div>
-                        </div>
+            <!-- Live Feed & Engine Visualization -->
+            <section class="panel">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                    <h3 class="label">Live Observation Feed</h3>
+                    <div class="mono" style="font-size: 0.75rem; color: var(--text-tertiary);">ID: NULL (Privacy Active)
                     </div>
                 </div>
 
-                <!-- Distress Interpretation UI -->
-                <div class="glass reveal pulse-amber" style="padding: 3rem; position: relative;">
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.5rem;">
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                    <!-- Visualization Grid -->
+                    <div>
+                        <canvas id="obs-grid" class="obs-grid"></canvas>
+                        <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <button id="btn-init-audio" class="op-btn">Initialize Sensor Array (Mic)</button>
+                            <div id="model-status"
+                                style="display: none; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--text-tertiary); margin-top: 1rem;">
+                                <div class="spinner"></div> Loading Neural Model (AST)...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Signal Metrics -->
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
                         <div>
-                            <p
-                                style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
-                                Sentiment Analysis Feed</p>
-                            <h3 id="distress-status" style="color: var(--accent-teal);">SYSTEM CALM</h3>
+                            <div class="signal-row">
+                                <span class="mono" style="font-size: 0.85rem;">Vocal Distress</span>
+                                <span class="mono" id="val-vocal" style="font-size: 0.85rem;">--</span>
+                            </div>
+                            <div class="meter-container">
+                                <div id="bar-vocal" class="meter-bar"></div>
+                            </div>
                         </div>
-                        <div style="text-align: right;">
-                            <p style="font-size: 1.5rem; font-weight: 600;" id="distress-score">0</p>
-                            <p style="font-size: 0.6rem; color: var(--text-muted); margin-top: -0.2rem;">CONFIDENCE</p>
+
+                        <div>
+                            <div class="signal-row">
+                                <span class="mono" style="font-size: 0.85rem;">Impulse Event</span>
+                                <span class="mono" id="val-impulse" style="font-size: 0.85rem;">--</span>
+                            </div>
+                            <div class="meter-container">
+                                <div id="bar-impulse" class="meter-bar"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="signal-row">
+                                <span class="mono" style="font-size: 0.85rem;">Environmental Alert</span>
+                                <span class="mono" id="val-env" style="font-size: 0.85rem;">--</span>
+                            </div>
+                            <div class="meter-container">
+                                <div id="bar-env" class="meter-bar"></div>
+                            </div>
                         </div>
                     </div>
 
-                    <div
-                        style="height: 10px; background: rgba(255,255,255,0.05); border-radius: 5px; overflow: hidden; margin-bottom: 2.5rem;">
-                        <div id="distress-meter-fill"
-                            style="height: 100%; width: 0%; background: var(--accent-teal); border-radius: 5px;"></div>
-                    </div>
-
-                    <div style="display: grid; gap: 1rem;" id="signal-monitors">
-                        <!-- Filled by JS -->
-                    </div>
-
-                    <div
-                        style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border); display: flex; justify-content: space-between;">
-                        <button class="btn btn-outline" id="btn-reset-demo"
-                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">Reset Scene</button>
-                        <button class="btn btn-primary" id="btn-trigger-panic"
-                            style="padding: 0.5rem 1rem; font-size: 0.8rem;">Simulate Panic</button>
+                    <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+                        <p class="label" style="margin-bottom: 0.5rem;">Accumulation Status</p>
+                        <div id="status-indicator" style="font-size: 0.9rem; color: var(--text-secondary);">Waiting
+                            for signal...</div>
                     </div>
                 </div>
-            </div>
-        </section>
+    </div>
+    </section>
 
-        <!-- Use Cases Carousel / Grid -->
-        <section class="container" style="margin-top: 12rem;" id="case-studies">
-            <h2 class="reveal" style="font-size: 2.5rem; text-align: center; margin-bottom: 4rem;">Human Scenarios</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem;">
-                <div class="glass reveal" style="padding: 2.5rem; transition: 0.5s;">
-                    <p
-                        style="color: var(--accent-blue); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem;">
-                        Public Transit</p>
-                    <h3 style="margin-bottom: 1.5rem;">Silent Panic Events</h3>
-                    <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 2rem;">When a passenger
-                        freezes due to a medical episode or harassment, SSL identifies the lack of natural movement and
-                        erratic breathing patterns.</p>
-                    <button class="btn btn-outline" style="width: 100%; justify-content: center;"
-                        onclick="alert('Viewing Case Study: Public Transit')">Case Study</button>
-                </div>
-                <div class="glass reveal" style="padding: 2.5rem; transition: 0.5s;">
-                    <p
-                        style="color: var(--accent-rose); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem;">
-                        Crowd Safety</p>
-                    <h3 style="margin-bottom: 1.5rem;">Stampede Prevention</h3>
-                    <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 2rem;">SSL monitors crowd
-                        rhythm. A sudden change in movement cadence combined with high-distress facial signals triggers
-                        early warning. </p>
-                    <button class="btn btn-outline" style="width: 100%; justify-content: center;"
-                        onclick="alert('Viewing Case Study: Crowd Safety')">Case Study</button>
-                </div>
-                <div class="glass reveal" style="padding: 2.5rem; transition: 0.5s;">
-                    <p
-                        style="color: var(--accent-teal); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem;">
-                        Domestic Emergency</p>
-                    <h3 style="margin-bottom: 1.5rem;">Elderly Welfare</h3>
-                    <p style="color: var(--text-secondary); font-size: 1rem; margin-bottom: 2rem;">A fall without a
-                        call. SSL detects the sudden cessation of movement followed by micro-vocalizations of distress,
-                        alerting care teams.</p>
-                    <button class="btn btn-outline" style="width: 100%; justify-content: center;"
-                        onclick="alert('Viewing Case Study: Domestic Emergency')">Case Study</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ethics & Privacy -->
-        <section class="container" style="margin-top: 12rem; margin-bottom: 12rem;" id="ethics">
-            <div style="padding: 6rem; background: var(--bg-secondary); border-radius: 32px; text-align: center;"
-                class="reveal">
-                <h2 style="font-size: 3rem; margin-bottom: 2rem;">Privacy as a Pre-requisite</h2>
-                <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto 4rem auto; font-size: 1.1rem;">
-                    SSL does not recognize faces. It does not record conversations. It only processes the geometry of
-                    distress.
+    <!-- Sequential Scenarios -->
+    <section style="margin-top: 4rem;">
+        <h3 style="margin-bottom: 2rem;">Operational Scenarios</h3>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+            <div class="panel">
+                <p class="label" style="margin-bottom: 0.5rem;">Scenario A</p>
+                <h4 style="margin-bottom: 1rem;">Crowd Rhythm</h4>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                    Detecting sudden stops or flow irregularities in high-density areas.
                 </p>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; text-align: left;">
-                    <div>
-                        <h4 style="margin-bottom: 1rem; color: var(--accent-teal);">Edge Analysis</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Data is processed locally on the
-                            sensor. Only signal intensity and confidence scores are transmitted to dispatch.</p>
-                    </div>
-                    <div>
-                        <h4 style="margin-bottom: 1rem; color: var(--accent-teal);">Pattern Masking</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Identity-revealing features are
-                            blurred or omitted at the hardware level. The engine only "sees" points of motion.</p>
-                    </div>
-                    <div>
-                        <h4 style="margin-bottom: 1rem; color: var(--accent-teal);">Human in the Loop</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-secondary);">SSL suggests; it never commands.
-                            Final response authority always rests with human dispatch.</p>
-                    </div>
+                <div style="height: 4px; background: var(--bg-core); border-radius: 2px;">
+                    <div style="width: 12%; height: 100%; background: var(--text-tertiary);"></div>
                 </div>
-                <button class="btn btn-primary" style="margin-top: 5rem;" id="btn-view-whitepaper">Review Ethics
-                    Whitepaper</button>
             </div>
-        </section>
+            <div class="panel">
+                <p class="label" style="margin-bottom: 0.5rem;">Scenario B</p>
+                <h4 style="margin-bottom: 1rem;">Vulnerable Care</h4>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                    Monitoring for prolonged inactivity or micro-tremors in elderly residents.
+                </p>
+                <div style="height: 4px; background: var(--bg-core); border-radius: 2px;">
+                    <div style="width: 45%; height: 100%; background: var(--signal-caution);"></div>
+                </div>
+            </div>
+            <div class="panel">
+                <p class="label" style="margin-bottom: 0.5rem;">Scenario C</p>
+                <h4 style="margin-bottom: 1rem;">Respiratory Distress</h4>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                    Audio-proxy analysis of breathing rate and gap length.
+                </p>
+                <div style="height: 4px; background: var(--bg-core); border-radius: 2px;">
+                    <div style="width: 8%; height: 100%; background: var(--text-tertiary);"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <footer
-            style="padding: 4rem 0; border-top: 1px solid var(--glass-border); text-align: center; color: var(--text-muted); font-size: 0.85rem;">
-            <p>© 2026 SSL LAYER | Built with Empathy & Engineering</p>
-            <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 2rem;">
-                <span style="cursor: pointer;" onclick="alert('Project Link')">Documentation</span>
-                <span style="cursor: pointer;" onclick="alert('Access Dashboard')">System Access</span>
-                <span style="cursor: pointer;" onclick="alert('Contact Team')">Support</span>
+    <!-- Operational Commitment -->
+    <section style="margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--border-subtle);">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+            <div>
+                <h3>Operational Commitment</h3>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">
+                    Care-Aid is designed to be trusted under scrutiny. We prioritize privacy preservation,
+                    bias-aware thresholds, and human review.
+                </p>
             </div>
-        </footer>
+            <div>
+                <ul style="list-style: none; display: grid; gap: 1rem;">
+                    <li style="display: flex; gap: 1rem;">
+                        <span class="mono" style="color: var(--text-tertiary);">01</span>
+                        <div>
+                            <strong style="font-size: 0.9rem;">No PII Retention</strong>
+                            <p style="font-size: 0.8rem; color: var(--text-secondary);">All analysis is
+                                transient. No faces or voices are stored.</p>
+                        </div>
+                    </li>
+                    <li style="display: flex; gap: 1rem;">
+                        <span class="mono" style="color: var(--text-tertiary);">02</span>
+                        <div>
+                            <strong style="font-size: 0.9rem;">Proportional Escalation</strong>
+                            <p style="font-size: 0.8rem; color: var(--text-secondary);">Alerts require
+                                persistent signal accumulation, effectively filtering noise.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </main>
     </div>
     <script type="module" src="./main.js"></script>
 </body>

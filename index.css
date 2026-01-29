@@ -1,129 +1,171 @@
 :root {
-  /* Human-Centric Palette: Muted, Calm, Empathetic */
-  --bg-primary: #0a0c10;
-  --bg-secondary: #12161b;
-  --bg-card: rgba(255, 255, 255, 0.03);
+    /* Infrastructure Palette */
+    --bg-core: #0f1216;
+    /* Deepest Slate */
+    --bg-surface: #181b21;
+    /* Panel Background */
+    --bg-elevated: #22262e;
+    /* Card Background */
 
-  --text-primary: #e2e8f0;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-tertiary: #475569;
+    --text-mono: #64748b;
 
-  --accent-teal: #2dd4bf;
-  --accent-amber: #fbbf24;
-  --accent-rose: #fb7185;
-  --accent-blue: #38bdf8;
+    /* Operational Signals - Muted, not Neon */
+    --signal-safe: #334155;
+    --signal-active: #e2e8f0;
+    --signal-caution: #d97706;
+    /* Muted Amber */
+    --signal-alert: #be123c;
+    /* Deep Rose */
 
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-display: 'Inter', sans-serif;
+    --border-subtle: rgba(255, 255, 255, 0.06);
+    --border-focus: rgba(255, 255, 255, 0.15);
 
-  --transition-gentle: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-blur: blur(12px);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    --ease-operational: cubic-bezier(0.2, 0, 0.2, 1);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+    background-color: var(--bg-core);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
+/* Typography Scale - restrained */
 h1,
 h2,
-h3,
-h4 {
-  font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.02em;
+h3 {
+    font-weight: 500;
+    letter-spacing: -0.01em;
 }
 
-.container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 2rem;
+h1 {
+    font-size: 2.5rem;
 }
 
-.glass {
-  background: var(--bg-card);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
+h2 {
+    font-size: 1.75rem;
 }
 
-/* Specific UI Patterns */
-.btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: var(--transition-gentle);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  background: none;
-  color: var(--text-primary);
+h3 {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
 }
 
-.btn-primary {
-  background: var(--text-primary);
-  color: var(--bg-primary);
+.mono {
+    font-family: var(--font-mono);
+    letter-spacing: -0.02em;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+    font-weight: 600;
 }
 
-.btn-outline {
-  border-color: var(--glass-border);
+/* Layout Components */
+.layout-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
 }
 
-.btn-outline:hover {
-  background: var(--bg-card);
-  border-color: var(--text-secondary);
+.sidebar {
+    background: var(--bg-surface);
+    border-right: 1px solid var(--border-subtle);
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Animations */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: var(--transition-gentle);
+.main-content {
+    padding: 4rem 6rem;
+    max-width: 1400px;
 }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* Operational Components */
+.panel {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    /* Sharper corners for infrastructure feel */
+    padding: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.pulse-amber {
-  animation: pulse-amber 3s infinite;
+.signal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-subtle);
 }
 
-@keyframes pulse-amber {
-  0% {
-    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.1);
-  }
-
-  70% {
-    box-shadow: 0 0 0 15px rgba(251, 191, 36, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0);
-  }
+.meter-container {
+    height: 6px;
+    background: var(--bg-core);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 0.5rem;
 }
 
-#distress-meter-fill {
-  transition: width 1.2s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.8s ease;
+.meter-bar {
+    height: 100%;
+    background: var(--text-secondary);
+    width: 0%;
+    transition: width 1s linear;
+    /* Linear for "accumulation" feel */
+}
+
+/* Button - Functional, not clickable-looking */
+button.op-btn {
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    padding: 0.75rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+    margin-top: 1rem;
+}
+
+button.op-btn:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+    background: var(--bg-elevated);
+}
+
+button.op-btn.active {
+    background: var(--text-primary);
+    color: var(--bg-core);
+    border-color: var(--text-primary);
+}
+
+/* Visualization Canvas */
+canvas.obs-grid {
+    width: 100%;
+    height: 300px;
+    background: var(--bg-core);
+    border: 1px solid var(--border-subtle);
 }
